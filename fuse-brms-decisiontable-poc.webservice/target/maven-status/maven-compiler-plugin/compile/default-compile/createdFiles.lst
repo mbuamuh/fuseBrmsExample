@@ -1,0 +1,9 @@
+poc\decisiontable\fuse\brms\displayproduct\ObjectFactory.class
+poc\decisiontable\fuse\brms\displayproduct\DisplayProduct.class
+poc\decisiontable\fuse\brms\displayproduct\GetProductsResponse.class
+poc\decisiontable\fuse\brms\displayproduct\UserDetails.class
+poc\decisiontable\fuse\brms\displayproduct\GetProductsRequest.class
+poc\decisiontable\fuse\brms\displayproduct\DisplayProduct_Service.class
+poc\decisiontable\fuse\brms\displayproduct\ProductDetails.class
+poc\decisiontable\fuse\brms\displayproduct\package-info.class
+org\fuse\brms\poc\converter\GetProductsResponseConverter.class

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:tns="http://www.brms.fuse.decisiontable.poc/DisplayProduct/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	name="DisplayProduct" targetNamespace="http://www.brms.fuse.decisiontable.poc/DisplayProduct/">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.brms.fuse.decisiontable.poc/DisplayProduct/">
+
+			<xsd:complexType name="userDetails">
+				<xsd:sequence>
+					<xsd:element name="userName" type="xsd:string" />
+					<xsd:element name="userRole" type="xsd:string" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="productDetails">
+				<xsd:sequence>
+					<xsd:element name="productCode" type="xsd:string" />
+					<xsd:element name="productType" type="xsd:string" />
+					<xsd:element name="displayProduct" type="xsd:boolean" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:element name="getProductsRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="user" type="tns:userDetails" />
+						<xsd:element name="product" type="tns:productDetails" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+
+			<xsd:element name="getProductsResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="user" type="tns:userDetails" />
+						<xsd:element name="product" type="tns:productDetails" />
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="getProductsRequest">
+		<wsdl:part element="tns:getProductsRequest" name="getProductsRequest" />
+	</wsdl:message>
+	<wsdl:message name="getProductsResponse">
+		<wsdl:part element="tns:getProductsResponse" name="getProductsResponse" />
+	</wsdl:message>
+	<wsdl:portType name="DisplayProduct">
+		<wsdl:operation name="getProducts">
+			<wsdl:input message="tns:getProductsRequest" />
+			<wsdl:output message="tns:getProductsResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="DisplayProductSOAP" type="tns:DisplayProduct">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="getProducts">
+			<soap:operation
+				soapAction="http://www.brms.fuse.decisiontable.poc/DisplayProduct/NewOperation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="DisplayProduct">
+		<wsdl:port binding="tns:DisplayProductSOAP" name="DisplayProductSOAP">
+			<soap:address
+				location="http://www.brms.fuse.decisiontable.poc/DisplayProduct/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
