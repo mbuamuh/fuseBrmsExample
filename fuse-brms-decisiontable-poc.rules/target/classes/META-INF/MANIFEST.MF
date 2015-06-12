@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1432916959104
+Bnd-LastModified: 1433931753293
 Build-Jdk: 1.7.0_79
 Built-By: Owner
 Bundle-ManifestVersion: 2
@@ -8,6 +8,9 @@ Bundle-Name: org.pru.integration :: fuse-brms-decisiontable-poc.rules ::
 Bundle-SymbolicName: fuse-brms-decisiontable-poc.rules
 Bundle-Version: 0.0.1.SNAPSHOT
 Created-By: Apache Maven Bundle Plugin
+Export-Package: org.fuse.brms.poc;uses:="poc.decisiontable.fuse.brms.dis
+ playproduct,org.apache.camel,org.drools.core.command.runtime.rule,org.d
+ rools.core.command.runtime";version="0.0.1.SNAPSHOT"
 Import-Package: org.apache.camel;version="[2.10,3)",org.apache.camel.mod
  el;version="[2.10,3)",org.apache.camel.spi;version="[2.10,3)",org.drool
  s.compiler.compiler;version="[6.0,7)",org.drools.compiler.rule.builder.
@@ -18,13 +21,14 @@ Import-Package: org.apache.camel;version="[2.10,3)",org.apache.camel.mod
  ime;version="[6.0,7)",org.drools.core.command.runtime.rule;version="[6.
  0,7)",org.drools.core.conflict;version="[6.0,7)",org.drools.core.reteoo
  ;version="[6.0,7)",org.drools.core.rule.builder.dialect.asm;version="[6
- .0,7)",org.drools.core.spi;version="[6.0,7)",org.jbpm.bpmn2;version="[6
- .0,7)",org.jbpm.process.instance.event;version="[6.0,7)",org.jbpm.proce
- ss.instance.impl;version="[6.0,7)",org.kie.api;version="[6.0,7)",org.ki
- e.api.runtime.rule;version="[6.0,7)",org.kie.aries.blueprint;version="[
- 6.0,7)",org.kie.aries.blueprint.factorybeans;version="[6.0,7)",org.kie.
- camel.component;version="[6.0,7)",org.kie.internal;version="[6.0,7)",or
- g.osgi.service.blueprint;version="[1.0.0,2.0.0)",poc.decisiontable.fuse
- .brms.displayproduct;version="[0.0,1)"
+ .0,7)",org.drools.core.runtime.impl;version="[6.0,7)",org.drools.core.s
+ pi;version="[6.0,7)",org.jbpm.bpmn2;version="[6.0,7)",org.jbpm.process.
+ instance.event;version="[6.0,7)",org.jbpm.process.instance.impl;version
+ ="[6.0,7)",org.kie.api;version="[6.0,7)",org.kie.api.runtime.rule;versi
+ on="[6.0,7)",org.kie.aries.blueprint;version="[6.0,7)",org.kie.aries.bl
+ ueprint.factorybeans;version="[6.0,7)",org.kie.camel.component;version=
+ "[6.0,7)",org.kie.internal;version="[6.0,7)",org.osgi.service.blueprint
+ ;version="[1.0.0,2.0.0)",poc.decisiontable.fuse.brms.displayproduct;ver
+ sion="[0.0,1)"
 Require-Bundle: org.apache.cxf.bundle
 Tool: Bnd-1.50.0

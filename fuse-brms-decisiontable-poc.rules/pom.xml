@@ -29,6 +29,7 @@
     <dependency>
       <groupId>org.drools</groupId>
       <artifactId>drools-core</artifactId>
+       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.drools</groupId>
@@ -94,8 +95,7 @@
           <instructions>
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Bundle-Version>${project.version}</Bundle-Version>
-            <Export-Package/>
-            <Import-Package>!org.drools.camel.example,
+            <Import-Package>
               org.apache.camel;version="[2.10,3)",
               org.apache.camel.spi;version="[2.10,3)",
               org.apache.camel.model;version="[2.10,3)",
@@ -122,7 +122,9 @@
               org.kie.aries.blueprint;version="[6.0,7)",
               org.kie.aries.blueprint.factorybeans;version="[6.0,7)",
               org.kie.camel.component;version="[6.0,7)",
-            poc.decisiontable.fuse.brms.displayproduct</Import-Package>
+              org.drools.core.runtime.impl;version="[6.0,7)",
+              poc.decisiontable.fuse.brms.displayproduct;version="[0.0,1)"
+            </Import-Package>
             <Require-Bundle>org.apache.cxf.bundle</Require-Bundle>
           </instructions>
         </configuration>
